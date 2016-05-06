@@ -1,0 +1,344 @@
+% This is "sig-alternate.tex" V2.1 April 2013
+% This file should be compiled with V2.5 of "sig-alternate.cls" May 2012
+%
+% This example file demonstrates the use of the 'sig-alternate.cls'
+% V2.5 LaTeX2e document class file. It is for those submitting
+% articles to ACM Conference Proceedings WHO DO NOT WISH TO
+% STRICTLY ADHERE TO THE SIGS (PUBS-BOARD-ENDORSED) STYLE.
+% The 'sig-alternate.cls' file will produce a similar-looking,
+% albeit, 'tighter' paper resulting in, invariably, fewer pages.
+%
+% ----------------------------------------------------------------------------------------------------------------
+% This .tex file (and associated .cls V2.5) produces:
+%       1) The Permission Statement
+%       2) The Conference (location) Info information
+%       3) The Copyright Line with ACM data
+%       4) NO page numbers
+%
+% as against the acm_proc_article-sp.cls file which
+% DOES NOT produce 1) thru' 3) above.
+%
+% Using 'sig-alternate.cls' you have control, however, from within
+% the source .tex file, over both the CopyrightYear
+% (defaulted to 200X) and the ACM Copyright Data
+% (defaulted to X-XXXXX-XX-X/XX/XX).
+% e.g.
+% \CopyrightYear{2007} will cause 2007 to appear in the copyright line.
+% \crdata{0-12345-67-8/90/12} will cause 0-12345-67-8/90/12 to appear in the copyright line.
+%
+% ---------------------------------------------------------------------------------------------------------------
+% This .tex source is an example which *does* use
+% the .bib file (from which the .bbl file % is produced).
+% REMEMBER HOWEVER: After having produced the .bbl file,
+% and prior to final submission, you *NEED* to 'insert'
+% your .bbl file into your source .tex file so as to provide
+% ONE 'self-contained' source file.
+%
+% ================= IF YOU HAVE QUESTIONS =======================
+% Questions regarding the SIGS styles, SIGS policies and
+% procedures, Conferences etc. should be sent to
+% Adrienne Griscti (griscti@acm.org)
+%
+% Technical questions _only_ to
+% Gerald Murray (murray@hq.acm.org)
+% ===============================================================
+%
+% For tracking purposes - this is V2.0 - May 2012
+
+\documentclass{sig-alternate-05-2015}
+\usepackage{listings}
+\usepackage{float}
+
+\begin{document}
+
+% Copyright
+%\setcopyright{acmcopyright}
+%\setcopyright{acmlicensed}
+%\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+
+%Conference
+%\conferenceinfo{PLDI '13}{June 16--19, 2013, Seattle, WA, USA}
+
+%\acmPrice{\$15.00}
+
+%
+% --- Author Metadata here ---
+%\conferenceinfo{WOODSTOCK}{'97 El Paso, Texas USA}
+%\CopyrightYear{2007} % Allows default copyright year (20XX) to be over-ridden - IF NEED BE.
+%\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
+% --- End of Author Metadata ---
+
+\title{Project Report\\Who Are Trump Supporters?}
+\subtitle{CS 7930 Social Media Mining\\
+Spring 2016, May 6, 2016\\
+}
+%\subtitle{[Extended Abstract]
+%\titlenote{A full version of this paper is available as
+%\textit{Author's Guide to Preparing ACM SIG Proceedings Using
+%\LaTeX$2_\epsilon$\ and BibTeX} at
+%\texttt{www.acm.org/eaddress.htm}}}
+%
+% You need the command \numberofauthors to handle the 'placement
+% and alignment' of the authors beneath the title.
+%
+% For aesthetic reasons, we recommend 'three authors at a time'
+% i.e. three 'name/affiliation blocks' be placed beneath the title.
+%
+% NOTE: You are NOT restricted in how many 'rows' of
+% "name/affiliations" may appear. We just ask that you restrict
+% the number of 'columns' to three.
+%
+% Because of the available 'opening page real-estate'
+% we ask you to refrain from putting more than six authors
+% (two rows with three columns) beneath the article title.
+% More than six makes the first-page appear very cluttered indeed.
+%
+% Use the \alignauthor commands to handle the names
+% and affiliations for an 'aesthetic maximum' of six authors.
+% Add names, affiliations, addresses for
+% the seventh etc. author(s) as the argument for the
+% \additionalauthors command.
+% These 'additional authors' will be output/set for you
+% without further effort on your part as the last section in
+% the body of your article BEFORE References or any Appendices.
+
+\numberofauthors{1} %  in this sample file, there are a *total*
+% of EIGHT authors. SIX appear on the 'first-page' (for formatting
+% reasons) and the remaining two appear in the \additionalauthors section.
+%
+\author{
+% You can go ahead and credit any number of authors here,
+% e.g. one 'row of three' or two rows (consisting of one row of three
+% and a second row of one, two or three).
+%
+% The command \alignauthor (no curly braces needed) should
+% precede each author name, affiliation/snail-mail address and
+% e-mail address. Additionally, tag each line of
+% affiliation/address with \affaddr, and tag the
+% e-mail address with \email.
+%
+% 1st. author
+\alignauthor
+Gopal Menon\\
+       \affaddr{Computer Science Department}\\
+       \affaddr{Utah State University}\\
+       \affaddr{Logan, UT}\\
+       \email{gopal.menon@aggiemail.usu.edu}
+}
+% There's nothing stopping you putting the seventh, eighth, etc.
+% author on the opening page (as the 'third row') but we ask,
+% for aesthetic reasons that you place these 'additional authors'
+% in the \additional authors block, viz.
+
+% Just remember to make sure that the TOTAL number of authors
+% is the number that will appear on the first page PLUS the
+% number that will appear in the \additionalauthors section.
+
+
+\maketitle
+\begin{abstract}
+The current front runners in the 2016 Presidential Election are Donald Trump from the Republican party and Hillary Clinton from the Democratic party. The rise of Trump has taken many people by surprise and he was initially written off by supposed experts who expected his campaign to self destruct. As of the writing of this report, Trump is the only candidate left in the Republican field and is the presumptive nominee. This study aims to find out the reasons behind the rise of Trump by finding the Twitter community of his followers and then identifying the thought leaders in this community and their thoughts and ideas. By doing this I hope to identify the issues that matter most to Trump supporters.
+\end{abstract}
+
+
+%
+% The code below should be generated by the tool at
+% http://dl.acm.org/ccs.cfm
+% Please copy and paste the code instead of the example below. 
+%
+
+
+
+%
+% End generated code
+%
+
+%
+%  Use this command to print the description
+%
+
+% We no longer use \terms command
+%\terms{Theory}
+
+\section{Introduction}
+
+
+The Republican party base has been steadily moving away from traditional candidates as they reportedly feel that they do not have a say in matters that are of importance to them. The rise of the Tea Party and the influence of Talk Radio, has reportedly made the Republican base disillusioned with Congress. In the last few elections, traditionally safe Republican candidates have been unseated in the primaries by Tea Party candidates.There has been growing discontent with President Obama's perceived Liberal agenda and people in the Republican base seem to want to start afresh with new candidates as they seem to have lost trust in career politicians.
+
+Trump is not a career politician and has no experience in government. He started out as an outside candidate who was not taken seriously. However he has succeeded in becoming the presumptive nominee by appealing to the base of the Republican party. He has been accused by many of being racist, fear mongering and wrong on things that he has put forward as facts. He is accused of being neither religious nor conservative and has still emerged as the presumptive nominee from his party. He is reportedly disliked by members of his own party, but despite this, has emerged victorious
+
+The Democratic party traditionally has its strong base in the East and West coasts, Liberals and minority communities. Unlike the Republican party, the Democrats have not been going through any internal turmoils. However, their candidate has had her share of problems. Clinton has been associated with scandals from the past like her husband's infidelities and the Whitewater investigations. During her term as Secretary of State, she was held responsible for the death of the American ambassador along with three other persons, during the attack on the consulate in Benghazi. After her term, she was faced with the email scandal. Outside of her party she is reportedly disliked and is accused of being corrupt and is a very divisive figure.
+
+The Democrats, unlike the Republicans, started out with just four candidates and were left with only candidates - Hillary Clinton and Bernie Sanders. At the time of writing this proposal, Clinton seems to be the likely nominee from the party.
+
+\section{Why profile Trump supporters}
+
+\subsection{Why is it interesting}
+I find this interesting because of the success of the Trump campaign. He had been written off initially by news analysts and they did not expect him to last beyond the initial phase. His continued success has taken many people by surprise. By finding the issues that matter to his supporters, I can find out what are the key factors that drive the apparent demand for change among the base. Since the career politicians have not been successful, I can find out how the Republican party is out of touch with the issues that matter most to its base. The reasons could be perceived loss of employment opportunities due to globalization and illegal immigration, changes in the demographics of the voter population, perceived Liberal policies of President Obama, opposition to gay marriage and the Affordable Care Act (also known as Obamacare), fear of terrorism or it could be something that I have not thought of. Whatever the reasons are, they will be interesting as the emergence of Trump is an unforeseen phenomenon that maybe even he cannot explain.
+
+\subsection{Who will be interested}
+Social scientists, people who follow politics and key members of the two parties will potentially be interested in knowing the results of the investigation. 
+
+The Republican party will be interested as they apparently need to change their focus since all their traditional presidential candidates have been rejected by the primary voters. After the election of President Obama in 2008, many news analysts said that the Republican party needs to change its attitude towards that Latinos, who consist of the largest minority, in order to be viable in the future. They said the party may need to change in order to survive.  
+
+The Democrats on the other hand, have not had any issues with their traditional base. They would be interested in knowing what issues are important to their opponents and would want to use this information in order to to better compete.
+
+\section{Previous Research}
+
+Previous research has been done by Kloumann and Kleinberg \cite{SeedSet} on identifying members of a community starting from a small seed set. The seed set was expanded using PageRank and other algorithms. The PageRank algorithm reportedly had good results in identifying key members of a community given the seed set.
+
+\section{Methodology}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=3.0in]{./figures/TrumpProfile.png}
+\caption{Donald Trump's Twitter Profile}
+\label{TrumpProfile}
+\end{figure}
+The Twitter ids of Trump (see figure \ref{TrumpProfile}), his family members along with those of people from the media, politicians and other famous personalities were used as the seed set\cite{SeedSource}. The seed set details are given in figure \ref{SeedSetTable} in section \ref{sssec:num1}.
+
+The seed set was expanded using a Twitter crawler that started with each seed in the seed set and found the Twitter followers of the seeds. This process was repeated in order to identify the Twitter community of Trump followers.
+
+The PageRank algorithm was used to find the important members in the Twitter community
+
+\subsection{High Level Design}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=2.0in]{./figures/FifoQueue.png}
+\caption{First in First out Queue\cite{Queue}}
+\label{FifoQueue}
+\end{figure}
+The Twitter followers crawler started crawling from the seed set. It uses a FIFO Queue (see figure \ref{FifoQueue}) for implementing a Bread First Search (BFS). It starts out by loading the Queue with the seed set. Then does the following till the crawl level reaches a preset level: take a Twitter id out from the front of the Queue. Find out its followers using Twitters APIs and put the followers in the back of the Queue. 
+
+Twitter puts in a rate limit on the number of API requests that can be made. If the rate limit is exceeded, the API fails and an exception is thrown. To overcome this problem, the crawler keep track of the number of API requests that are allowed before the rate limit is exceeded. If the rate limit is reached or if any other error is detected, the crawler writes the Queue contents to a text file and sleeps for the amount of time that the requests are blocked. If the crawler is restarted after a crash, it has the ability to start from the the last saved point where the Queue contents were written to the text file. This restart ability was built into the crawler as the crawling process was expected to take a long time and it was essential that the Twitter community retrieved that far was not lost.
+
+The Page Rank algorithm\cite{IRB} was used to identify the important members of the Trump followers Twitter community. A sparse matrix was used for the transition probability matrix in order to save space. The teleportation probability was stored separately in order to keep the matrix sparse. In order to find the Page Ranks the probability vector was multiplied with the transition matrix in a loop till the probability vector reached a steady state that represented the Page Ranks. The multiplication loop was terminated when the cosine similarity between subsequent vectors reached 0.9999 or after 75 iterations, whichever came first. The following formula was used to find the cosine similarity between two vectors $A$ and $B$\cite{CosineSimilarity}:
+
+\begin{displaymath}
+Similarity = cos(\theta) = \frac{A \cdot B}{\left | A \right | \left | B \right |} = \frac{\sum\limits_{i=1}^{n} A_i B_i}{\sqrt{\sum\limits_{i=1}^{n} A_i^2 } \sqrt{\sum\limits_{i=1}^{n} B_i^2 }}
+\end{displaymath}
+
+The Page Ranks were sorted in decreasing order to identify the community though leaders.
+\begin{figure}[!t]
+\centering
+\includegraphics[width=2.0in]{./figures/BfsOrder.png}
+\caption{BFS\cite{BFS} - Order in which nodes are expanded}
+\label{BfsOrder}
+\end{figure}
+I plan to expand the seed set using the PageRank algorithm. Each member of the seed set will be a Twitter account. The other accounts followed by the seed account will constitute the equivalent of the forward links on a web page. In addition to the forward links, the list of accounts that are followers of an account will be the incoming links. This is where my approach differs from PageRank. The equivalent of the PageRank case where the graph walker is transported to a random web page, will be replaced by random transport to a member of the seed set. I plan to evaluate the output both with and without the incoming links. Use of PageRank will expand the seed set and give me a big community that is linked together. 
+
+When the community is sorted by decreasing order of page rank, I will obtain the thought leaders in the community. These accounts with higher page rank will be thought leaders as they will be the ones that are most important due to the fact that more people follow them, and because more important people follow them.
+
+Once the community though leaders have been obtained, I plan to use topic modeling on their Tweets in order to find out what issues and topics interest them and their followers.
+
+At the end of the project, I will have obtained the thought leaders in the Twitter community for each of the two presidential candidates and the topics and issues that matter to them.
+
+\subsection{Tools and Techniques}
+
+I plan to use Twitter APIs through Python for retrieval of Tweets and for Twitter account crawling. There are some repositories on GitHub that claim to be able to crawl Twitter. I would need to investigate these. The ability to recover from errors and restart along with the capability to crawl the Twitter graph in parallel will be an important criteria to consider.
+
+The Twitter graph of users along with followers will need to be stored in a graph database. For this purpose, I would need to evaluate and use a graph database.
+
+I would need to code or use a function that would compute a left eigen vector for computing the PageRank as described in \cite{IRB}.
+
+The R package has topic mining libraries that I plan to use for finding the major topics in the profiles and Tweets of the thought leaders of the community for each of the candidates.
+
+\subsection{Risks}
+\begin{itemize}
+\item As was seen in assignment 1 for retrieving Tweets, the process may take a long time and may not return many results. As a result, the process of retrieving the seed set or the Twitter graph of users and followers may take a lot of time.
+
+\item The Tweet retrieval process would fail intermittently.
+
+\item Twitter has limits on the retrieval rate that would limit data collection for the project.
+
+\item The seed set may not be of the right size or the right mix of accounts. This would limit the ability of the crawling process to uncover the important members of the community.
+
+\end{itemize}
+
+\subsection{Mitigation of Risks}
+
+\begin{itemize}
+
+\item In order to mitigate the risk of not getting enough data due to slow retrieval, I would need to start the process early.
+
+\item The retrieval process would need to be able to recover from failure and restart automatically.
+
+\item I would need to create multiple Twitter accounts in order to get around the limits on the retrieval rate. Retrieval would need to be interspersed with delays so that maximum limits are not reached. In order to further speed up the retrieval process, I would need to do parallel retrieval using the multiple CPU cores available.
+
+\item I would need to do further research in order to find out the optimal seed set composition for the project.
+
+\end{itemize}
+
+\section{Milestones}
+\begin{itemize}
+\item High Level Design complete - mid March
+\item Seed set identification complete - $3^{rd}$ week of March
+\item Twitter account crawling complete - $1^{st}$ week of April
+\item Topic Modeling complete - $3^{rd}$ week of April
+\item Project Report complete - end of April
+\end{itemize}
+\section{Evaluation Criteria for Results}
+
+I plan to compare the set of thought leaders obtained by following only forward links versus following both outgoing and incoming links. I expect the seed set expansion to be more complete in the latter case. 
+
+I expect to get a list of Twitter community thought leaders for each of the two candidates and their main topics and issues.
+
+There is no way to predict what results I am going to get, although I am sure that they will be interesting. The interesting for me will be the answer to the question \emph{who would want to support Donald Trump}. 
+
+\begin{thebibliography}{1}
+
+\bibitem{SeedSet}
+Kloumann, I.M. and Kleinberg, J.M., 2014, August. Community membership identification from small seed sets. In \emph{Proceedings of the 20th ACM SIGKDD international conference on Knowledge discovery and data mining} (pp. 1366-1375). ACM.
+
+\bibitem{IRB}
+Manning, C. D., Raghavan, P., \& Sch\"utze, H. (2008). Introduction to information retrieval/Christopher D.
+
+\bibitem{SeedSource}
+"List of Donald Trump Presidential Campaign Endorsements, 2016." Wikipedia. Wikimedia Foundation, n.d. Web. 05 May 2016.
+
+\bibitem{Queue}
+"Queue (abstract Data Type)." Wikipedia. Wikimedia Foundation, n.d. Web. 06 May 2016.
+
+\bibitem{BFS}
+"Breadth-first Search." Wikipedia. Wikimedia Foundation, n.d. Web. 06 May 2016.
+
+\bibitem{CosineSimilarity}
+"Cosine Similarity." Wikipedia. Wikimedia Foundation, n.d. Web. 06 May 2016.
+
+\end{thebibliography}
+
+\section{Supplementary Materials}
+\subsection{Seed Set}
+\label{sssec:num1} 
+The seed set used is shown in figure \ref{SeedSetTable}. The actual seeds used were the Twitter Ids corresponding to the names and handles shown in the figure.
+\begin{figure}[!t]
+\centering
+\includegraphics[width=3.5in]{./figures/SeedSet.png}
+\caption{Seed Set}
+\label{SeedSetTable}
+\end{figure}
+%
+% The following two commands are all you need in the
+% initial runs of your .tex file to
+% produce the bibliography for the citations in your paper.
+%\bibliographystyle{abbrv}
+%\bibliography{sigproc}  % sigproc.bib is the name of the Bibliography in this case
+% You must have a proper ".bib" file
+%  and remember to run:
+% latex bibtex latex latex
+% to resolve all references
+%
+% ACM needs 'a single self-contained file'!
+%
+%APPENDICES are optional
+%\balancecolumns
+%\appendix
+%Appendix A
+%\section{Sample Tweets}
+
+%\balancecolumns % GM June 2007
+% That's all folks!
+\end{document}
